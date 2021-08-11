@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package cartographer.mapping.proto;
+
+import "cartographer/transform/proto/transform.proto";
+
+message EsKFParas {
+  transform.proto.Rigid3d laser_to_imu = 1;
+  transform.proto.Rigid3d imu_to_laser = 2;
+}

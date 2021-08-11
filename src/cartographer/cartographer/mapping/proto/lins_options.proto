@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package cartographer.mapping.proto;
+
+import "cartographer/transform/proto/transform.proto";
+
+message LINSOptions {
+  
+  int32 initialization_mode = 1;
+  int32 init_window_size = 2;
+  int32 line_num = 3;
+  float ang_res_x = 4;
+  float ang_res_y = 5;
+  float ang_bottom = 6;
+  float ground_scan_index = 7;
+  float sensorMountAngle = 8;
+  float segmentTheta = 9;
+  float segmentValidPointNum = 10;
+  float segmentValidLineNum = 11;
+  
+  int32 edgeFeatureNum = 13;
+  int32 surfFeatureNum = 14;
+  int32 sectionsTotal = 15;
+
+  int32 SCAN_NUM = 16;
+  float SCAN_PERIOD = 17;
+  float EDGE_THRESHOLD = 18;
+  float SURF_THRESHOLD = 19;
+  float NEAREST_FEATURE_SEARCH_SQ_DIST = 20;
+
+  float ACC_N = 21;
+  float ACC_W = 22;
+  float GYR_N = 23;
+  float GYR_W = 24;
+}

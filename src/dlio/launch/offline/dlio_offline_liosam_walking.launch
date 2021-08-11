@@ -1,0 +1,32 @@
+<!--
+  Copyright 2016 The Cartographer Authors
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+       http://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<launch>
+  <param name="/use_sim_time" value="true" />
+  <node name="cartographer_offline_node" pkg="cartographer_ros"
+      type="cartographer_offline_node" args="
+          -use_bag_transforms false
+          -load_frozen_state false
+          -configuration_directory $(find dlio)/config
+          -configuration_basenames campus.lua
+          -urdf_filenames $(find dlio)/urdf/liosam_walking.urdf
+          -bag_filenames $(arg bag_filenames)
+          -save_pbstream true
+          -save_range_data false
+          -save_traj_nodes_filename ''"
+      output="screen">
+    <remap from="imu" to="/imu_raw" />
+    <remap from="points2" to="/points_raw" />
+  </node>
+
+</launch>

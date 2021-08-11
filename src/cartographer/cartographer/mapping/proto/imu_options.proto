@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package cartographer.mapping.proto;
+message ImuOptions{
+  float acc_noise = 1;
+  float gyr_noise = 2;
+  float acc_bias_noise = 3;
+  float gyr_bias_noise = 4;
+  float prior_pose_noise = 5;
+  float prior_vel_noise = 6;
+  float prior_bias_noise = 7;
+  float ceres_pose_noise_t = 8;
+  float ceres_pose_noise_r = 9;
+  float ceres_pose_noise_t_drift = 10;
+  float ceres_pose_noise_r_drift = 11;
+  float gravity = 12;
+  float prior_gravity_noise = 13;
+}

@@ -1,0 +1,22 @@
+<package format="2">
+  <name>dlio</name>
+  <version>0.1.0</version>
+  <description>
+    Cartographer configurations and launch files for dlio.
+  </description>
+  <maintainer email="2010194@tongji.edu.cn">
+    Zhong Wang
+  </maintainer>
+  <license>Apache 2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>g++-static</build_depend>
+
+  <depend>cartographer_ros</depend>
+  <depend>message_runtime</depend>
+  <depend>roscpp</depend>
+  <depend>roslib</depend>
+
+  <test_depend>rosunit</test_depend>
+</package>

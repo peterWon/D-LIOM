@@ -1,6 +1,7 @@
-> This repository is the implementation of our paper "D-LIOM: Tightly-coupled Direct LiDAR-Inertial Odometry and Mapping" (Under Review). 
-
+> This repository is the implementation of our paper "D-LIOM: Tightly-coupled Direct LiDAR-Inertial Odometry and Mapping". 
+>
 > A running demo can be found at https://youtu.be/21J2QLUQbno or at https://www.bilibili.com/video/BV14y4y157du
+
 ---
 ### Prerequisites
 - Install depends follow the instructions of ["cartographer"](https://google-cartographer.readthedocs.io/en/latest/index.html) and ["cartographer_ros"](https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html) respectively. 
@@ -8,31 +9,68 @@
 - [GTSAM 4.0.2](https://github.com/borglab/gtsam/tree/4.0.2)
 ---
 ### Build
-- Clone this repo in your ROS workspace
+- Clone this repository in your ROS workspace
+
 - Set CMake variable "OpenCV_DIR" in the root [CMakeLists.txt](src/cartographer/CMakeLists.txt) of "cartographer". 
-- Return th the root folder of your ROS workspace and run:
+
+- Return to the root folder of your ROS workspace (which has the same directory as this "README" file) and run:
 
       catkin_make_isolated
 ---
 ### Run an online demo
-#### TONGJI Handheld Dataset
+#### TONGJI Dataset
 - Some demo sequences can be downloaded via: 
-  - TONGJI handheld dataset: [link](https://pan.baidu.com/s/12Y6CErygofwPf9f8FrNLqA), pwd: hfrl
--     roslaunch dlio demo_dlio_tongji.launch bag_filename:=BAG_FILE_PATH
+
+  - TONGJI dataset: [link](https://pan.baidu.com/s/12Y6CErygofwPf9f8FrNLqA), pwd: hfrl
+
+- ```roslaunch dlio demo_dlio_tongji.launch bag_filename:=BAG_FILE_PATH```
   where BAG_FILE_PATH is the full path of the downloaded bag file in your device
 
-- Some results
-![Rotation](img/rot.png)
-![TJ](img/tj.png)
-![TJ](img/tj-traj.png)
+- Some results on the self-collected TONGJI dataset.
+
+  <div align="center">
+      <img src="img/rot.png">  
+  </div>
+
+  <div align="center">
+      <img src="img/hc.png">  
+  </div>
 #### NTU-VIRAL
+
 - The dataset is available online at [NTU-VIRAL](https://ntu-aris.github.io/ntu_viral_dataset/)
--     roslaunch dlio demo_dlio_viral.launch bag_filename:=BAG_FILE_PATH
+
+-     ```roslaunch dlio demo_dlio_viral.launch bag_filename:=BAG_FILE_PATH```
   where BAG_FILE_PATH is the full path of the downloaded bag file in your device
+  
+-     Results on VIRAL
+  
+  <div align="center">
+      <img src="img/ntu_eee.png">  
+  </div>
+  
+  <div align="center">
+      <img src="img/ntu_nya.png">  
+  </div>
+  
+  <div align="center">
+      <img src="img/ntu_sbs.png">  
+  </div>
+  
+  
+  
+  
 #### KAIST-Complex Urban Dataset
 - The dataset is available online at [KAIST](https://irap.kaist.ac.kr/dataset/)
+
 - Play KAIST bag follow the instruction: [file_player](https://irap.kaist.ac.kr/dataset/development.html)
--     roslaunch dlio demo_dlio_kaist.launch
+
+- ```roslaunch dlio demo_dlio_kaist.launch```
+
+- Results on KAIST "Urban-09" and "Urban-10"
+
+  <div align="center">
+      <img src="img/kaist.png">  
+  </div>
 #### Your own data
 - Write a urdf file of your device and save it to folder ['urdf'](src/dlio/urdf)
 - Write a configuration file of your data and save it to ['config'](src/dlio/config)

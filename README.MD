@@ -1,4 +1,4 @@
-> This repository is the implementation of our paper "D-LIOM: Tightly-coupled Direct LiDAR-Inertial Odometry and Mapping". 
+> This repository is the implementation of our paper "D-LIOM: Tightly-coupled Direct LiDAR-Inertial Odometry and Mapping" which is now early accessed at [IEEE Xplore](https://ieeexplore.ieee.org/document/9760190) or an unofficial version is available from this online [website](http://cslinzhang.gitee.io/home/files/D-LIOM.pdf). 
 >
 > A running demo can be found at https://youtu.be/21J2QLUQbno or at https://www.bilibili.com/video/BV14y4y157du
 

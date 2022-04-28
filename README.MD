@@ -1,7 +1,9 @@
 > This repository is the implementation of our paper "D-LIOM: Tightly-coupled Direct LiDAR-Inertial Odometry and Mapping" which is now early accessed at [IEEE Xplore](https://ieeexplore.ieee.org/document/9760190) or an unofficial version is available from this online [website](http://cslinzhang.gitee.io/home/files/D-LIOM.pdf). 
 >
 > A running demo can be found at https://youtu.be/21J2QLUQbno or at https://www.bilibili.com/video/BV14y4y157du
-
+---
+### Sensor suite supported
+6-axis IMU + Velodyne/Ouster/Robosense LiDAR (Livox LiDAR can be also supported if the data of which is tansformed to the format of velodyne's, i.e., PointXYZRT.)
 ---
 ### Prerequisites
 - Install depends follow the instructions of ["cartographer"](https://google-cartographer.readthedocs.io/en/latest/index.html) and ["cartographer_ros"](https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html) respectively. 

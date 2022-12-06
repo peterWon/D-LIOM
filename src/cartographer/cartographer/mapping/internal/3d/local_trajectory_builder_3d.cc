@@ -1087,6 +1087,12 @@ bool LocalTrajectoryBuilder3D::AlignWithWorld() {
 
 void LocalTrajectoryBuilder3D::InitCircularBuffers(){
   Eigen::Vector3d zero_vec(0., 0., 0.);
+  all_laser_transforms_.clear();
+  Ps_.clear();
+  Rs_.clear();
+  Vs_.clear();
+  Bas_.clear();
+  Bgs_.clear();
   for(size_t i = 0; i < frames_for_dynamic_initialization_+1; ++i){
     all_laser_transforms_.push_back(Rigid3dWithVINSPreintegrator());
     Ps_.push_back(zero_vec);

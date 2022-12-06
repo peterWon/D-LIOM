@@ -35,6 +35,8 @@ private:
     const std::deque<Vector3d> &Vs,
     const double gnorm,
     Vector3d &g_approx);
+public:
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 };
 
 

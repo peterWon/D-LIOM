@@ -35,11 +35,11 @@ find_package(LuaGoogle REQUIRED)
 find_package(Protobuf 3.0.0 REQUIRED)
 
 # add for lins, wz
-find_package(PCL REQUIRED QUIET)
+find_package(PCL 1.8.0 REQUIRED)
 find_package(VTK REQUIRED)
-find_package(GTSAM REQUIRED QUIET)
+find_package(GTSAM 4.0.2 REQUIRED)
 # self built, with SURF
-set(OpenCV_DIR "/home/wz/github/opencv-3.3.1/install/share/OpenCV")
+set(OpenCV_DIR "/home/wz/study_hub/opencv-3.3.1/install/share/OpenCV")
 find_package(OpenCV 3.3.1 REQUIRED)
 # find_package(catkin REQUIRED COMPONENTS ndt_omp)
 

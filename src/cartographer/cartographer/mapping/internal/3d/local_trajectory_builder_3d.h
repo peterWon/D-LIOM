@@ -276,6 +276,8 @@ private:
   std::deque<Rigid3dWithPreintegrator> g_est_transforms_;
   std::deque<Rigid3dWithPreintegrator> g_est_transforms_tmp_;
   std::deque<Eigen::Vector3d> g_est_Vs_;
+public:
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 };
 
 }  // namespace mapping

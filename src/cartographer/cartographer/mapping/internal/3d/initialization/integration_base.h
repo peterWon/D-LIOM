@@ -23,6 +23,7 @@ struct IMUNoise{
 };
 class IntegrationBase {
 public:
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   IntegrationBase() = delete;
   IntegrationBase(
       const Eigen::Vector3d &_linearized_ba, 

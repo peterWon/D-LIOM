@@ -10,7 +10,12 @@
 ### Prerequisites
 - Install depends follow the instructions of ["cartographer"](https://google-cartographer.readthedocs.io/en/latest/index.html) and ["cartographer_ros"](https://google-cartographer-ros.readthedocs.io/en/latest/compilation.html) respectively. 
 - Build [OpenCV 3.3.1](https://opencv.org/releases/page/2/) (other version may work fine if it includes implementation of SURF keypoint detector) from source with "opencv_contrib"
-- [GTSAM 4.0.2](https://github.com/borglab/gtsam/tree/4.0.2)
+- Build [GTSAM 4.0.2](https://github.com/borglab/gtsam/tree/4.0.2) with compile options as follows:
+  
+  ```cmake -DGTSAM_USE_SYSTEM_EIGEN=ON -DGTSAM_WITH_TBB=OFF -DGTSAM_BUILD_WITH_MARCH_NATIVE=OFF -DGTSAM_COMPILE_OPTIONS_PUBLIC="" ..```
+- Build [PCL 1.8.0]() with compile options as follows:
+  
+  ```cmake -DPCL_ENABLE_SSE=OFF ..```
 ---
 ### Build
 - Clone this repository in your ROS workspace

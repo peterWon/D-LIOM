@@ -15,6 +15,7 @@ using Eigen::VectorXd;
 // template <typename T>
 class Rigid3dWithPreintegrator{
 public:
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   explicit Rigid3dWithPreintegrator(){
     transform = transform::Rigid3d::Identity();
     pre_integration = nullptr;
@@ -32,6 +33,7 @@ public:
 // more accurate in initialization via experiments.
 class Rigid3dWithVINSPreintegrator{
 public:
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   explicit Rigid3dWithVINSPreintegrator(){
     transform = transform::Rigid3d::Identity();
     pre_integration = nullptr;

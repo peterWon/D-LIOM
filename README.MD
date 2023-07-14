@@ -1,6 +1,6 @@
 ## D-LIOM: Tightly-coupled Direct LiDAR-Inertial Odometry and Mapping
 
-> **Our paper**: we have corrected some typos and errors in Section III-D of the previous version of the paper, the revised version can be accessed [here](https://github.com/peterWon/D-LIOM/blob/master/paper/TMM_D_LIOM_FINAL_VERSION.pdf). When amending our paper, I would like to say thanks to [Sky Shaw](https://www.zhihu.com/people/carman-shaw-97), who has found my errors and warmly provided his suggestions.
+> **Our paper**: we have corrected some typos and errors in Section III-D of the previous version of the paper, the revised version can be accessed [here](https://github.com/peterWon/D-LIOM/blob/master/paper/TMM_D_LIOM_FINAL_VERSION.pdf). When amending our paper, I would like to say thanks to [Sky Shaw](https://www.zhihu.com/people/sky-shaw-jhu), who has found my errors and warmly provided his suggestions.
 >
 > **Related video:** A running demo can be found at https://youtu.be/21J2QLUQbno or at https://www.bilibili.com/video/BV14y4y157du.
 ---
